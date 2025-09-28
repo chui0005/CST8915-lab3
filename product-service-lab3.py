@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 # Configure CORS: allow any origin, restrict to GET requests
 
-CORS(app, resources={r"/products": {"origins": "*"}}, methods=["GET"])
+CORS(app) # resources={r"/products": {"origins": "*"}}, methods=["GET"]
 
 # Static product data (equivalent to Rust's vec![])
 
