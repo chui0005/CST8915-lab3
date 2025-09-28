@@ -9,9 +9,9 @@ load_dotenv()
 
 app = Flask(__name__)
 
-# Configure CORS: allow any origin, restrict to GET requests
+# Apply CORS globally, allowing only your VM frontend
 
-CORS(app) # resources={r"/products": {"origins": "*"}}, methods=["GET"]
+CORS(app, origins=["http://20.220.168.77:8080"])
 
 # Static product data (equivalent to Rust's vec![])
 
